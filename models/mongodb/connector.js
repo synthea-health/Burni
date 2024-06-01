@@ -16,7 +16,7 @@ module.exports = exports = function (config) {
 
     hosts.forEach((host, index) => {
         if (index == 0) {
-            databaseUrl += `mongodb://${host}:${ports[0]}`;
+            databaseUrl += `${process.env.MONGODB_PROTOCOL || "mongodb://"}${host}:${ports[0]}`;
         } else {
             databaseUrl += `,${host}:${ports[index]}`;
         }
