@@ -1,5 +1,5 @@
 module.exports.pluginsConfig = {
-    token_auth: {
+    tokenAuth: {
         enable: false,
         before: true,
         routers: [
